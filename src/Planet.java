@@ -6,7 +6,7 @@ public enum Planet {
     JUPITER (1.900e+27, 7.1492e7, 779e6),
     SATURN  (5.688e+26, 6.0268e7, 143e9),
     URANUS  (8.686e+25, 2.5559e7, 288e9),
-    NEPTUNE (1.024e+26, 2.4746e7, 45e90);
+    NEPTUNE (1.024e+26, 2.4746e7, 450e9);
 //  PLUTO   (1.303e+22, 1187, 591e9);         // sorry pluto. Moved to MinorPlanet enum
 
     private final double mass;          // in kilograms

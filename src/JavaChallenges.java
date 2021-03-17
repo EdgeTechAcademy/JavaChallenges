@@ -8,13 +8,15 @@ public class JavaChallenges {
         //  getIntArray will create a random length array with random numbers. It will generate different numbers each time
         int[] intAr = Utils.getIntArray();
         System.out.print("[");
-        for(int num : intAr) System.out.print(num+", ");
+        for(int num : intAr)
+            System.out.print(num+", ");
         System.out.println("]");
 
         //      F.	Given a string create an array of the words in the string.
         String[] words = Utils.getRandomWords();
         System.out.print("[");
-        for(String word : words) System.out.print(word+", ");
+        for(String word : words)
+            System.out.print(word+", ");
         System.out.println("]");
 
         int rand = Utils.getRandomNum(20);
@@ -22,7 +24,7 @@ public class JavaChallenges {
         Q_A(intAr);                             //  A.	Given an array of integers find the largest, smallest and the average.
         Q_B(intAr);                             //  B.	Given an array of integers find the second largest and the second smallest.
         Q_C(intAr);                             //  C.	Given an array of integers return the total of all values.
-        Q_D(intAr, Utils.getRandomNum(100));    //  D.	Given an array of integers return count of numbers > some value.
+        Q_D(intAr, rand);                       //  D.	Given an array of integers return count of numbers > some value.
         Q_E(words);                             //  E.	Given an array of strings find the longest string.
         Q_G(rand);                              //  G.	Given a number print a square with that as the length and width of the sides.
         Q_H(rand);                              //  H.	Given a number print a tree shape.
@@ -117,7 +119,11 @@ public class JavaChallenges {
         for (int num : intAr) {
             total += num;
         }
+        System.out.println("The total for the array is: " + total);
+
         total = Arrays.stream(intAr).sum();
+        System.out.println("The total for the array is: " + total);
+
         total = Arrays.stream(intAr).reduce((tot, next) -> tot + next ).getAsInt();
         System.out.println("The total for the array is: " + total);
     }
@@ -128,6 +134,8 @@ public class JavaChallenges {
         for (int num : intAr) {
             count += num > max ? 1 : 0;
         }
+        System.out.println("There are " + count + " numbers greater than " + max);
+
         count = (int)Arrays.stream(intAr).filter(num -> num > max).count();
         System.out.println("There are " + count + " numbers greater than " + max);
     }
@@ -210,7 +218,7 @@ public class JavaChallenges {
         String name = "Edge Tech Academy";
         int space1 = name.indexOf(" ") + 1;       //  indexOf will find the first space.
                                                   // The +1 gets the location of the 'T'
-        int space2 = name.indexOf(" ", space1 + 1) + 1;     //  find the next space after the first space
+        int space2 = name.indexOf(" ", space1) + 1;     //  find the next space after the first space
                                                   //  the +1 gets the location of the 'A'
         initials = "" +name.charAt(0) + name.charAt(space1) + name.charAt(space2);
         System.out.println(initials);
@@ -221,7 +229,7 @@ public class JavaChallenges {
         int start = (int) (Math.random() * 16) + 10;    //  *15 gives a number between 0 and 15.
                                                         // +10 moves the numbers from 10 to 25
         int end = (int) (Math.random() * 16) + 10;
-        for (int i = start; i < end; i++) {             //  sometimes end will be less than start
+        for (int i = start; i <= end; i++) {            //  sometimes end will be less than start
             System.out.println("Loop index: " + i);     //  and the loop will do zero loops
         }
     }
@@ -316,12 +324,12 @@ public class JavaChallenges {
     static void Q_S() {
         //  S.	Given a temperature return the type of clothing you should wear.
         int temp = Utils.getRandomNum(100);
-        String recommendation = "It is " + temp + "degrees. Wear a";
-        if ( temp < 32 )    recommendation += " heavy coat";
+        String recommendation = "It is " + temp + " degrees. Wear a";
+        if      (temp < 32) recommendation += " heavy coat";
         else if (temp < 43) recommendation += " coat";
         else if (temp < 55) recommendation += " light jacket";
         else if (temp < 62) recommendation += " long sleeve shirt";
-        else if (temp < 74) recommendation += " short sleave shirt";
+        else if (temp < 74) recommendation += " short sleeve shirt";
         else if (temp < 80) recommendation += " t-shirt";
         else if (temp < 96) recommendation += " shorts";
         else                recommendation += " swimming suit and go swimming";
@@ -352,8 +360,8 @@ public class JavaChallenges {
         //  V.	Loop 0 to 100, print Fizz if divisible by 3, Buzz if divisible by 5 and # otherwise
         for (int i = 0; i < 100; i++) {
             if      (i % 15 == 0) System.out.println("Fizz Buzz");
-            else if (i %  5 == 0) System.out.println("Fizz");
-            else if (i %  3 == 0) System.out.println("Buzz");
+            else if (i %  5 == 0) System.out.println("Buzz");
+            else if (i %  3 == 0) System.out.println("Fizz");
             else                  System.out.println(i);
         }
     }
@@ -374,19 +382,21 @@ public class JavaChallenges {
         int y1 = Utils.getRandomNum(20);
         int x2 = Utils.getRandomNum(20);
         int y2 = Utils.getRandomNum(20);
-        double distance = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2);
+        double distance = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
         System.out.println("The distance between point {" + x1 + "," + y1 + "} " +
                                                  " and {" + x2 + "," + y2 + "} is " + distance);
     }
 
     static void Q_Y() {
-        //  Y.	Give the center coordinate of a circle {x, y} and the radius r, determine if a point {x1, y1} is inside the circle. (distance from x, y is < r)
+        //  Y.	Give the center coordinate of a circle {x, y} and the radius r,
+        //      determine if a point {x2, y2} is inside the circle. (distance from x, y is <radius )
         int x1 = Utils.getRandomNum(20);
         int y1 = Utils.getRandomNum(20);
         int radius = Utils.getRandomNum(20);
+
         int x2 = Utils.getRandomNum(20);
         int y2 = Utils.getRandomNum(20);
-        double distance = Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2);
+        double distance = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
         System.out.println("A Circle at point {" + x1 + "," + y1 + "} with Radius " + radius +
                             " and at point at {" + x2 + "," + y2 + "} is at a distance of " + distance);
         if ( distance < radius )

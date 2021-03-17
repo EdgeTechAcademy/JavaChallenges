@@ -21,5 +21,4 @@ public class RunningShoe extends Shoe {
         super(size, "Leather", brand, false);
         this.endorsedBy = endorsedBy;
     }
-
 }

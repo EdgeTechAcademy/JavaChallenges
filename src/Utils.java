@@ -11,7 +11,7 @@ import java.util.Scanner;
 public class Utils {
 
     static Scanner sc = new Scanner(System.in);
-    static String[] lines = Utils.readLines("C:\\Projects\\csv\\Dictionaries\\10KWords.txt");
+    static String[] lines = Utils.readLines("C:/Projects/csv/Dictionaries/10KWords.txt");
 
     /**
      * 		getInput	-	Prompt the user to type something in the console window
