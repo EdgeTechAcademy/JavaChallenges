@@ -21,31 +21,31 @@ public class JavaChallenges {
 
         int rand = Utils.getRandomNum(20);
 
-        Q_A(intAr);                             //  A.	Given an array of integers find the largest, smallest and the average.
-        Q_B(intAr);                             //  B.	Given an array of integers find the second largest and the second smallest.
-        Q_C(intAr);                             //  C.	Given an array of integers return the total of all values.
-        Q_D(intAr, rand);                       //  D.	Given an array of integers return count of numbers > some value.
-        Q_E(words);                             //  E.	Given an array of strings find the longest string.
-        Q_G(rand);                              //  G.	Given a number print a square with that as the length and width of the sides.
-        Q_H(rand);                              //  H.	Given a number print a tree shape.
-        Q_I(words);                             //  I.	Given a string convert to an array words print words within a box.
-        Q_J(words);                             //  J.	Given a string with a person’s name return a string of their initials
-        Q_K();                                  //  K.	Generate two random numbers, between 10 and 25; loop from the first to the last.
-        Q_L();                                  //  L.	Given a string print the individual characters front to back and back to front.
-        Q_M();                                  //  M.	Given a string reverse it..ti esrever gnirts a neviG
-        Q_N();                                  //  N.	Create a method to proper case all words in a string.
-        Q_O();                                  //  O.	Create an Enum class for the Planets in the Solar System.
-        Q_P();                                  //  P.	Given a Planet return the distance from the Sun. (Use your Planet Enum)
-        Q_Q();                                  //  Q.	Create a Class for a Shoe. Must have at least 4 properties.
-        Q_R();                                  //  R.	Create a base class with 3 properties, create a child class from that base class
-        Q_S();                                  //  S.	Given a temperature return the type of clothing you should wear.
-        Q_T();                                  //  T.	Given a distance in miles convert to kilometers.
-        Q_U();                                  //  U.	Given a number calculate the date that many days in the future.
-        Q_V();                                  //  V.	Loop 0 to 100, print Fizz if divisible by 3, Buzz if divisible by 5 and # otherwise
-        Q_W();                                  //  W.	Find the sum of all the multiples of 3 or 5 below 1000.
-        Q_X();                                  //  X.	Given two coordinates {x1, y1} and {x2, y2} what is the distance between them
-        Q_Y();                                  //  Y.	Give the center coordinate of a circle {x, y} and the radius r, determine if a point {x1, y1} is inside the circle. (distance from x, y is < r)
-        Q_Z();                                  //  Z.	Read a file from your hard drive and print the contents
+        Q_A(intAr);             //  A.	Given an array of integers find the largest, smallest and the average.
+        Q_B(intAr);             //  B.	Given an array of integers find the second largest and the second smallest.
+        Q_C(intAr);             //  C.	Given an array of integers return the total of all values.
+        Q_D(intAr, rand);       //  D.	Given an array of integers return count of numbers > some value.
+        Q_E(words);             //  E.	Given an array of strings find the longest string.
+        Q_G(rand);              //  G.	Given a number print a square with that as the length and width of the sides.
+        Q_H(rand);              //  H.	Given a number print a tree shape.
+        Q_I(words);             //  I.	Given a string convert to an array words print words within a box.
+        Q_J(words);             //  J.	Given a string with a person’s name return a string of their initials
+        Q_K();                  //  K.	Generate two random numbers, between 10 and 25; loop from the first to the last.
+        Q_L();                  //  L.	Given a string print the individual characters front to back and back to front.
+        Q_M();                  //  M.	Given a string reverse it..ti esrever gnirts a neviG
+        Q_N();                  //  N.	Create a method to proper case all words in a string.
+        Q_O();                  //  O.	Create an Enum class for the Planets in the Solar System.
+        Q_P();                  //  P.	Given a Planet return the distance from the Sun. (Use your Planet Enum)
+        Q_Q();                  //  Q.	Create a Class for a Shoe. Must have at least 4 properties.
+        Q_R();                  //  R.	Create a base class with 3 properties, create a child class from that base class
+        Q_S();                  //  S.	Given a temperature return the type of clothing you should wear.
+        Q_T();                  //  T.	Given a distance in miles convert to kilometers.
+        Q_U();                  //  U.	Given a number calculate the date that many days in the future.
+        Q_V();                  //  V.	Loop 0 to 100, print Fizz if divisible by 3, Buzz if divisible by 5 and # otherwise
+        Q_W();                  //  W.	Find the sum of all the multiples of 3 or 5 below 1000.
+        Q_X();                  //  X.	Given two coordinates {x1, y1} and {x2, y2} what is the distance between them
+        Q_Y();                  //  Y.	Give the center coordinate of a circle {x, y} and the radius r, determine if a point {x1, y1} is inside the circle. (distance from x, y is < r)
+        Q_Z();                  //  Z.	Read a file from your hard drive and print the contents
     }
 
     static void Q_A(int[] intAr) {
